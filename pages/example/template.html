@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project template</title>
+	<link href="https://fonts.googleapis.com/css?family=Antic+Didone&display=swap" rel="stylesheet">
+</head>
+<style type="text/css">
+	body, html {
+		font-family: 'Antic Didone', serif;
+		top:0;
+		left:0;
+		width:100%:;
+		margin:0%;
+	}
+	h1 {
+		font-size:1em;
+	}
+	.sticky {
+		position:fixed;
+		margin:5%;
+		color:white;
+		border-bottom:1em solid gold;
+	}
+	.exercise {
+		top:0;
+		left:0%;
+	}
+	.content {
+		padding:5%;
+		width:90%;
+		min-height:100vh;
+		max-height:fit-content;
+		text-align:right;
+	}
+	.content h1 {
+		font-size:3em;
+		font-weight:800;
+		text-align:left;
+		opacity:0.5;
+	}
+	.content p {
+		font-size:3em;
+		color:white;
+	}
+	.content img {
+		width:50%;
+		transition:0.25s ease-in-out;
+		box-shadow: 0em 0em 1em #666666;
+		display:inline-block;
+	}
+	#one, #three, #five {
+		background-color:#008cff;
+		color:#f2f2f2;
+	}
+	#two, #four {
+		background-color:#0cd7e8;
+	}
+	#five {
+		text-align:center;
+	}
+	a {
+		background-color:transparent;
+		padding:2%;
+		border:0.5em solid gold;
+		text-decoration: none;
+		color:white;
+		transition:0.25s ease-in-out;
+		display: block;
+    	width: fit-content
+	}
+	a:hover{
+		background-color:gold;
+		color:#008cff;
+	}
+	.left {
+		font-size:1.5em!important;
+		text-align:left;
+	}
+	em {
+		display:block;
+		font-style:normal;
+		color:gold;
+		font-weight:900;
+	}
+</style>
+<body>
+	<!-- Exercise 1 materials -->
+	<div class='exercise'>
+		<h1 class='sticky'>Exercise 1: User Discovery</h1>
+		<!-- Research question -->
+		<div class='content' id='one'>
+			<h1>Research question</h1>
+			<p>How can Google Timeline be redesigned to increase number of data-driven actions?</p>
+		</div>
+		<!-- User survey -->
+		<div class='content' id='two'>
+			<h1>User survey</h1>
+			<p class='left'>How easy is it to use?</p>
+			<p class='left'>How do people think it can better benefit them?</p>
+			<p class='left'>What types of recommendations do they think their travel data should be used for?</p>
+			<a href="https://emilychu3.typeform.com/to/FjUTn2" target="new">View live survey</a>
+		</div>
+		<!-- Results of user survey -->
+		<div class='content' id='three'>
+			<h1>Survey results</h1>
+			<!-- image link -->
+			<img src="assets/results.png">
+			<a href="https://emilychu3.typeform.com/report/FjUTn2/1cLKdWvIrylwLeFo" target="new">View live survey results</a>
+		</div>
+		<!-- Ideation basd on survey-->
+		<div class='content' id='four'>
+			<h1>Ideation</h1>
+			<img src="assets/idea1.jpeg">
+			<img src="assets/idea2.jpeg">
+			<img src="assets/idea3.jpeg">
+		</div>
+		<!-- Prototype -->
+		<div class='content' id='five'>
+			<h1>Iterations</h1>
+			<h2>Starting point</h2>
+			<video autoplay controls style="width:20%" src='assets/proto1.mp4'></video>
+			<p class='left'>
+				<em>Improve insights</em> Improve use of historical data to show interesting qualities of visited places<br><br>
+				<em>Recommendations by "My Type</em> Explore nearby recommendations by top categories<br><br>
+				<em>Surprise & Fun</em>Incorporate elements of surprise in interaction inspired by looking through journal scrapbooks<br><br>
+			</p>
+			<a href="https://xd.adobe.com/view/3eadbb2d-145e-4057-4ca0-2810be433055-489c/">Adobe XD</a>
+		</div>
+	</div>
+
+</body>
+</html>
