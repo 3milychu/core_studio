@@ -2,80 +2,121 @@
 <html>
 <head>
 	<title>Google Timeline Redesign</title>
-	<link href="https://fonts.googleapis.com/css?family=Antic+Didone&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap" rel="stylesheet">
 	<meta name="viewport" content="width=device-width">
 </head>
 <style type="text/css">
 	body, html {
-		font-family: 'Antic Didone', serif;
+		font-family: 'Roboto', serif;
 		top:0;
 		left:0;
 		width:100%;
 		margin:0%;
+		padding-bottom:10vh;
 	}
 	h1 {
-		font-size:1em;
+		font-size:2em;
+	    position: sticky;
+	    top: 0%;
+	    background-color: white;
+	    border-bottom: 0.05em solid #CCCCCC;
+	    width: 100%;
+	    z-index: 100;
+	    margin: 0%;
+	    padding: 3% 0%;
+	}
+	h2 {
+		width:10%;
+	}
+	span {
+		display:inline-block;
+		text-transform:uppercase;
+		font-size:0.5em;
+		vertical-align:middle;
+		letter-spacing: 0.5em;
+		padding-left:10%;
 	}
 	.sticky {
 		position:fixed;
-		margin:5%;
-		color:white;
-		border-bottom:1em solid gold;
+	    color: #666666;
+	    right:0%;
+	    top: 5%;
+	    right:5%;
+	    z-index:100;
+	    font-weight:500;
+	}
+
+	.timeline-icon {
+		width:1em;
+		height:1em;
+		background-repeat:no-repeat;
+		display:inline-block;
+		background-image:url('assets/timeline-icon.png');
+		padding-right:5%;
+		vertical-align: middle;
 	}
 	.exercise {
 		top:0;
 		left:0%;
 	}
 	.content {
-		padding:5%;
+		padding:0% 5%;
 		width:90%;
 		min-height:100vh;
 		max-height:fit-content;
-		text-align:right;
+		text-align:center;
+		position:relative;
+		z-index:90;
 	}
 	.content h1 {
 		font-size:3em;
-		font-weight:800;
+		font-weight:100;
 		text-align:left;
-		opacity:0.5;
+		opacity:1;
+	}
+	.aligner {
+		position:absolute;
+		left:5%;
+		right:5%;
+		bottom:10%;
+	}
+	iframe {
+		width:100%;
 	}
 	.content p {
-		font-size:3em;
-		color:white;
+		font-weight:400;
+		font-size:1em;
+		color:#666666;
 	}
 	.content img {
 		width:50%;
-		transition:0.25s ease-in-out;
-		box-shadow: 0em 0em 1em #666666;
+		box-shadow: 0em 0em 0.2em #CCCCCC;
+		border:0.2em solid white;
+		border-radius:0.1em;
 		display:inline-block;
+		transition:0.1s ease-in-out;
 	}
-	#one, #three, #five {
-		background-color:#008cff;
-		color:#f2f2f2;
+	.content img:hover {
+		box-shadow:0em 0em 0.5em #CCCCCC;
 	}
-	#two, #four {
-		background-color:#0cd7e8;
-	}
-	#five {
-		text-align:center;
+	.small-img {
+		width:25%!important;
 	}
 	a {
 		background-color:transparent;
-		padding:2%;
-		border:0.5em solid gold;
 		text-decoration: none;
+	}
+	.button {
+		background-color:#4285f4;
 		color:white;
-		transition:0.25s ease-in-out;
+		padding:2%;
+		transition:0.1s ease-in-out;
 		display: block;
     	width: fit-content
+    	text-align:center;
 	}
-	a:hover{
-		background-color:gold;
-		color:#008cff;
-	}
-	.left {
-		font-size:1.5em!important;
-		text-align:left;
+	.button:hover{
+		box-shadow:0em 0em 0.5em #666666;
 	}
 	em {
 		display:block;
@@ -86,67 +127,90 @@
 	video {
 		width:20%;
 	}
+	@media screen and (max-width:1250px){
+	.sticky {
+			width:18%;
+			top:2%;
+		}
+	}
 	@media screen and (max-width:767px){
 		video{
 			width:80%;
 		}
-	a {
-		text-align:center;
-		font-size:1.5em;
-		margin:10% 0%;
-		border:0.3em solid gold;
-	}
-	.sticky {
-		border-bottom:0.5em solid gold;
-	}
-	.content img {
-		width:100%;
-	}
+		.content img {
+			width:100%;
+		}
+		h1 {
+			font-size:2.5em!important;
+		}
+		.sticky {
+			transform:scale(0.6);
+			width:25%;
+			top:0%;
+		}
 }
 
 </style>
 <body>
 	<!-- Exercise 1 materials -->
 	<div class='exercise'>
-		<h1 class='sticky'>Exercise 1: User Discovery</h1>
-		<!-- Research question -->
-		<div class='content' id='one'>
+		<h2 class='sticky'><div class='timeline-icon'></div>Timeline<span>Redesign</span></h2>
+		<!-- Current UI -->
+		<div class='content'>
 			<h1>Research question</h1>
-			<p>How can Google Timeline be redesigned to increase number of data-driven actions?</p>
+			<div class=aligner>
+				<p>How can Google Timeline be redesigned to increase number of data-driven actions?</p>
+				<img src="assets/annotate/1.png">
+				<a target="new" href="assets/annotate/2.png"><div class='button'>View existing design</div></a>
+			</div>
+		</div>
+		<!-- Problem areas -->
+		<div class='content'>
+			<h1>Opportunities</h1>
+			<div class=aligner>
+				<img src="assets/annotate/2.png">
+				<a target="new" href="assets/annotate/2.png"><div class='button'>View opportunities</div></a>
+			</div>
 		</div>
 		<!-- User survey -->
-		<div class='content' id='two'>
+		<div class='content'>
 			<h1>User survey</h1>
-			<p class='left'>How easy is it to use?</p>
-			<p class='left'>How do people think it can better benefit them?</p>
-			<p class='left'>What types of recommendations do they think their travel data should be used for?</p>
-			<a href="https://emilychu3.typeform.com/to/FjUTn2" target="new">View live survey</a>
+			<iframe width=800 height=500 scrolling=yes frameBorder=0 src="https://emilychu3.typeform.com/to/FjUTn2"></iframe>
 		</div>
 		<!-- Results of user survey -->
-		<div class='content' id='three'>
+		<div class='content'>
 			<h1>Survey results</h1>
 			<!-- image link -->
-			<img src="assets/results.png">
-			<a href="https://emilychu3.typeform.com/report/FjUTn2/1cLKdWvIrylwLeFo" target="new">View live survey results</a>
+			<iframe width=800 height=1000 scrolling=yes frameBorder=0 src="https://emilychu3.typeform.com/report/FjUTn2/1cLKdWvIrylwLeFo"></iframe>
 		</div>
 		<!-- Ideation basd on survey-->
-		<div class='content' id='four'>
+		<div class='content'>
 			<h1>Ideation</h1>
-			<img src="assets/idea1.jpeg">
-			<img src="assets/idea2.jpeg">
-			<img src="assets/idea3.jpeg">
+			<div class="aligner">
+				<img class="small-img" src="assets/idea1.jpeg">
+				<img class="small-img" src="assets/idea2.jpeg">
+				<img class="small-img" src="assets/idea3.jpeg">
+			</div>
+		</div>
+		<!-- Design system -->
+		<div class='content'>
+			<h1>Design system</h1>
+			<div class=aligner>
+				<p>Proposed colors, character styles and components</p>
+				<img src="assets/annotate/ds.png">
+				<a target="new" href="https://adobe.ly/31lFNtD"><div class='button'>View design system</div></a>
+			</div>
 		</div>
 		<!-- Prototype -->
-		<div class='content' id='five'>
+		<div class='content'>
 			<h1>Iterations</h1>
-			<h2>Starting point</h2>
 			<video autoplay controls src='assets/proto1.mp4'></video>
-			<p class='left'>
+			<p>
 				<em>Improve insights</em> Improve use of historical data to show interesting qualities of visited places<br><br>
 				<em>Recommendations by "My Type</em> Explore nearby recommendations by top categories<br><br>
 				<em>Surprise & Fun</em>Incorporate elements of surprise in interaction inspired by looking through journal scrapbooks<br><br>
 			</p>
-			<a href="https://xd.adobe.com/view/3eadbb2d-145e-4057-4ca0-2810be433055-489c/">Working live prototype</a>
+			<a target="new" href="https://xd.adobe.com/view/3eadbb2d-145e-4057-4ca0-2810be433055-489c/"><div class='button'>Working live prototype</div></a>
 		</div>
 	</div>
 
